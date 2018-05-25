@@ -25,6 +25,9 @@ var LayerVectorTileComponent = (function (_super) {
         this.instance = new openlayers_1.layer.VectorTile(this);
         _super.prototype.ngOnInit.call(this);
     };
+    LayerVectorTileComponent.prototype.ngOnChanges = function (changes) {
+        _super.prototype.ngOnChanges.call(this, changes);
+    };
     return LayerVectorTileComponent;
 }(layer_component_1.LayerComponent));
 LayerVectorTileComponent.decorators = [

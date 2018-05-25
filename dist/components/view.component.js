@@ -7,6 +7,7 @@ var ViewComponent = (function () {
     function ViewComponent(host) {
         this.host = host;
         this.componentType = 'view';
+        this.zoomAnimation = false;
     }
     ViewComponent.prototype.ngOnInit = function () {
         // console.log('creating ol.View instance with: ', this);
@@ -23,7 +24,12 @@ var ViewComponent = (function () {
                 switch (key) {
                     case 'zoom':
                         /** Work-around: setting the zoom via setProperties does not work. */
-                        this.instance.setZoom(changes[key].currentValue);
+                        if (this.zoomAnimation) {
+                            this.instance.animate({ zoom: changes[key].currentValue });
+                        }
+                        else {
+                            this.instance.setZoom(changes[key].currentValue);
+                        }
                         break;
                     default:
                         break;
@@ -64,6 +70,7 @@ ViewComponent.propDecorators = {
     'zoomFactor': [{ type: core_1.Input },],
     'center': [{ type: core_1.Input },],
     'projection': [{ type: core_1.Input },],
+    'zoomAnimation': [{ type: core_1.Input },],
 };
 exports.ViewComponent = ViewComponent;
 //# sourceMappingURL=view.component.js.map

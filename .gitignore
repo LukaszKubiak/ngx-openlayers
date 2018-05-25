@@ -2,9 +2,6 @@
 node_modules/*
 npm-debug.log
 
-# compiled output
-/dist
-
 # JetBrains
 .idea
 .project

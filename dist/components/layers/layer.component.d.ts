@@ -13,6 +13,8 @@ export declare abstract class LayerComponent implements OnInit, OnChanges, OnDes
     zIndex: number;
     minResolution: number;
     maxResolution: number;
+    precompose: (evt: ol.events.Event) => void;
+    postcompose: (evt: ol.events.Event) => void;
     constructor(host: LayerGroupComponent | MapComponent);
     ngOnInit(): void;
     ngOnDestroy(): void;

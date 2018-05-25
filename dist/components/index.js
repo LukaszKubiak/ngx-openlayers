@@ -5,6 +5,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./controls"));
 __export(require("./formats"));
+__export(require("./geometries"));
 __export(require("./interactions"));
 __export(require("./layers"));
 __export(require("./sources"));
@@ -14,7 +15,6 @@ __export(require("./attributions.component"));
 __export(require("./content.component"));
 __export(require("./coordinate.component"));
 __export(require("./feature.component"));
-__export(require("./geometry.components"));
 __export(require("./graticule.component"));
 __export(require("./map.component"));
 __export(require("./overlay.component"));

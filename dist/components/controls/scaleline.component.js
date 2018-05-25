@@ -28,5 +28,8 @@ ControlScaleLineComponent.decorators = [
 ControlScaleLineComponent.ctorParameters = function () { return [
     { type: map_component_1.MapComponent, },
 ]; };
+ControlScaleLineComponent.propDecorators = {
+    'units': [{ type: core_1.Input },],
+};
 exports.ControlScaleLineComponent = ControlScaleLineComponent;
 //# sourceMappingURL=scaleline.component.js.map

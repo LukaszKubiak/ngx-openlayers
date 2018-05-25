@@ -18,6 +18,7 @@ var StyleCircleComponent = (function () {
             // console.log('setting ol.style.Circle instance\'s radius');
             this.instance.setRadius(this.radius);
         }
+        this.host.update();
     };
     StyleCircleComponent.prototype.ngAfterContentInit = function () {
         // console.log('creating ol.style.Circle instance with: ', this);

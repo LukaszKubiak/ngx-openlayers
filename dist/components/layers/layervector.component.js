@@ -25,6 +25,9 @@ var LayerVectorComponent = (function (_super) {
         this.instance = new openlayers_1.layer.Vector(this);
         _super.prototype.ngOnInit.call(this);
     };
+    LayerVectorComponent.prototype.ngOnChanges = function (changes) {
+        _super.prototype.ngOnChanges.call(this, changes);
+    };
     return LayerVectorComponent;
 }(layer_component_1.LayerComponent));
 LayerVectorComponent.decorators = [
